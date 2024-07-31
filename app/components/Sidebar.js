@@ -6,8 +6,8 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="relative h-[calc(100vh-82.4px)]">
-      <div className="p-5 w-[225px] h-[calc(100vh-82.4px)] flex flex-col gap-5 border-r border-[#30375033] md:hidden">
+    <div className="relative h-[calc(100vh-82.4px)] overflow-auto">
+      <div className="p-5 w-[225px] lg:w-[120px] h-[calc(100vh-82.4px)] flex flex-col gap-5 border-r border-[#30375033] md:hidden">
         <div className="flex items-center gap-3">
           <Home />
           <h2 className="text-[13px] text-[#0B79DA] font-semibold">Home</h2>
