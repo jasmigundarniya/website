@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { CiSquareChevDown, CiSquareChevUp } from "react-icons/ci";
 import "../styles.css";
+import PrimaryLayout from "../layout/PrimaryLayout";
 
 function AccordionItem({ heading, content, isOpen, onClick }) {
   return (
@@ -33,9 +34,8 @@ export default function DemandDetails() {
   const accordionData = Array.from({ length: 10 }, (_, index) => ({
     heading: (
       <div
-        className={`py-3 px-10 flex items-center justify-between ${
-          openIndex === index ? "bg-[#F3F6FE]" : ""
-        } border-b border-[#0000001A] w-full`}
+        className={`py-3 px-10 flex items-center justify-between ${openIndex === index ? "bg-[#F3F6FE]" : ""
+          } border-b border-[#0000001A] w-full`}
       >
         <div className="uppercase text-black text-sm font-medium w-full text-start text-[16px]">
           ASHUl {index + 1}
@@ -94,42 +94,46 @@ export default function DemandDetails() {
   }));
 
   return (
-    <div className="py-6 px-36 bg-[#F3F6FE]">
-      <div className="text-[#989BA8] text-[26px]">
-        Home<span className="text-black">/ Demand Details</span>
-      </div>
+    <PrimaryLayout>
+      <div className="px-40 3xl:px-20 xl:px-5 bg-[#F3F6FE]">
+        <div className="text-[#989BA8] text-[26px] xs:text-[20px]">
+          Home<span className="text-black">/ Demand Details</span>
+        </div>
 
-      <div className="mt-5 bg-white rounded-lg border border-[#D6D7DC]">
-        <div className="py-4 px-10 flex items-center justify-between border-b border-[#0000001A]">
-          <div className="uppercase text-black text-sm font-bold w-full text-[16px]">
-            In charge
-          </div>
-          <div className="uppercase text-black text-sm font-bold w-full text-center text-[16px]">
-            Offer
-          </div>
-          <div className="uppercase text-black text-sm font-bold w-full text-center text-[16px]">
-            Quantity (MT)
-          </div>
-          <div className="w-full"></div>
-        </div>
-        <div className="w-full">
-          <div
-            id="accordion-collapse"
-            data-accordion="collapse"
-            className="w-full"
-          >
-            {accordionData.map((item, index) => (
-              <AccordionItem
-                key={index}
-                heading={item.heading}
-                content={item.content}
-                isOpen={openIndex === index}
-                onClick={() => toggleAccordion(index)}
-              />
-            ))}
+        <div className="overflow-x-auto">
+          <div className="mt-5 bg-white rounded-lg border border-[#D6D7DC]  min-w-[640px]">
+            <div className="py-4 px-10 flex items-center justify-between border-b border-[#0000001A]">
+              <div className="uppercase text-black text-sm font-bold w-full md:flex-shrink-0 md:w-auto text-[16px]">
+                In charge
+              </div>
+              <div className="uppercase text-black text-sm font-bold w-full md:flex-shrink-0 md:w-auto text-center text-[16px]">
+                Offer
+              </div>
+              <div className="uppercase text-black text-sm font-bold w-full md:flex-shrink-0 md:w-auto md:pe-7 text-center text-[16px]">
+                Quantity (MT)
+              </div>
+              <div className="w-full md:flex-shrink-0 md:w-auto"></div>
+            </div>
+            <div className="w-full">
+              <div
+                id="accordion-collapse"
+                data-accordion="collapse"
+                className="w-full"
+              >
+                {accordionData.map((item, index) => (
+                  <AccordionItem
+                    key={index}
+                    heading={item.heading}
+                    content={item.content}
+                    isOpen={openIndex === index}
+                    onClick={() => toggleAccordion(index)}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </PrimaryLayout>
   );
 }
