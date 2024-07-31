@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import bg1 from "@/public/assets/images/bg1.png";
 import bg2 from "@/public/assets/images/bg2.png";
 import bg3 from "@/public/assets/images/bg3.png";
@@ -14,11 +14,12 @@ import bg10 from "@/public/assets/images/bg10.png";
 import bg11 from "@/public/assets/images/bg11.png";
 import bg12 from "@/public/assets/images/bg12.png";
 import mainlogo from "@/public/assets/images/mainlogo.png";
+import left from "@/public/assets/images/left.png";
 import Image from "next/image";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
+import OTPInput from "otp-input-react";
 
 const page = () => {
+  const [OTP, setOTP] = useState("");
   return (
     <div>
       <div>
@@ -44,20 +45,36 @@ const page = () => {
               <h4 className="text-[18px] font-semibold text-center mb-3">
                 Please enter the verification code we sent to your number.
               </h4>
-              <PhoneInput
-                country={"in"}
-                value="1234567890"
-                inputProps={{
-                  style: {
-                    width: "100%",
-                    height: "50px",
-                    borderRadius: "10",
-                  },
+
+              <OTPInput
+                value={OTP}
+                onChange={setOTP}
+                autoFocus
+                OTPLength={6}
+                otpType="number"
+                disabled={false}
+                secure
+                inputStyles={{
+                  border: "1px solid #D6D7DC",
+                  width: "48px",
+                  height: "48px",
+                  marginRight: "8px",
                 }}
               />
-              <button className="bg-[#0B79DA] rounded-full w-full py-3 text-[16px] font-bold text-white mt-4 my-2 px-5">
-                Send Code
+
+              <button className="bg-[#0B79DA] rounded-full w-full py-3 text-[16px] font-bold text-white mt-4 my-2 px-5 flex justify-center items-center">
+                Verify
               </button>
+              <div>
+                <p className="text-[16px] text-gray-400 text-center">
+                  Did you don’t get code?{" "}
+                  <span className="text-black"> Request new <br/> code in 00:05</span>
+                </p>
+                <div className="text-[16px] text-[#0B79DA] font-normal flex gap-2 justify-center items-center mt-5">
+                  <Image src={left} width={20} height={20} />
+                  Back
+                </div>
+              </div>
             </div>
           </div>
           <div className="flex justify-end gap-5">
