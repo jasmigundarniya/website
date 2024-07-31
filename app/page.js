@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-
+import Login from "./login/page";
 const page = () => {
   return (
     <div>
-      <Header />
-      <Sidebar />
+      <Login />
+      {/* <Header />
+      <Sidebar /> */}
     </div>
   );
 };
