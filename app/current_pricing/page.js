@@ -8,27 +8,27 @@ const page = () => {
         <PrimaryLayout>
             <div className="bg-[#f3f6fe]  h-[calc(100vh-82.4px)] overflow-auto">
                 <div className="container px-40 3xl:px-20 xl:px-5">
-                    <div className="heading font-normal xs:text-[20px] text-[26px] pb-[30px]">
+                    <div className="heading font-normal  text-[18px] pb-[30px]">
                         <p>Current Pricing</p>
                     </div>
                     <div>
                         <div className="main-tab flex justify-between">
 
-                            <div className="left-div flex flex-wrap gap-4">
+                            <div className="left-div flex flex-wrap gap-4  md:w-full">
 
-                                <div className="location-div flex">
+                                <div className="location-div flex md:w-full">
 
                                     <button onClick={() => setActiveTab(1)} type="button"
-                                        class={`px-6 py-3.5 rounded-l-md  font-semibold ${activeTab === 1 ? "text-white bg-[#0B79DA]" : "text-[#0B79DA] border border-[#0B79DA] bg-white"} `}>By Location</button>
+                                        class={`px-6 py-3.5 rounded-l-md md:w-full text-[18px] font-semibold ${activeTab === 1 ? "text-white bg-[#0B79DA]" : "text-[#0B79DA] border border-[#0B79DA] bg-white"} `}>By Location</button>
 
                                     <button onClick={() => setActiveTab(2)} type="button"
-                                        class={`px-6  rounded-r-md  font-semibold ${activeTab === 2 ? "text-white py-[15px] bg-[#0B79DA]" : "text-[#0B79DA] py-[13px] border border-[#0B79DA] bg-white"} `}>By Product</button>
+                                        class={`px-6 text-[18px] rounded-r-md md:w-full font-semibold ${activeTab === 2 ? "text-white py-[15px] bg-[#0B79DA]" : "text-[#0B79DA] py-[13px] border border-[#0B79DA] bg-white"} `}>By Product</button>
 
                                 </div>
 
-                                <div className="country">
+                                <div className="country md:w-full">
 
-                                    <select id="countries" class="h-[54px] rounded-md  bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-[350px] pl-[15px] xl:w-auto">
+                                    <select id="countries" class="h-[54px] md:w-full rounded-md  bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-[350px] pl-[15px]">
                                         <option selected>Choose a country</option>
                                         <option value="US">United States</option>
                                         <option value="CA">Canada</option>
@@ -43,9 +43,9 @@ const page = () => {
                         </div>
 
                         {activeTab === 1 ?
-                            <div class="relative overflow-x-auto mt-5">
+                            <div class="relative mt-5">
                                 <table class="w-full text-sm text-left rtl:text-right text-black border border-[#D6D7DC] rounded-md">
-                                    <thead class="text-black font-bold text-[16px] uppercase">
+                                    <thead class="text-black font-bold text-[16px] md:text-[10px]  uppercase">
                                         <tr className='bg-white border-b border-[#D6D7DC]'>
                                             <th scope="col" class="px-6 py-4 uppercase">
                                                 Product
@@ -60,7 +60,7 @@ const page = () => {
                                     </thead>
                                     <tbody>
                                         <tr class="bg-white border-b border-[#D6D7DC]">
-                                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            <th scope="row" class="px-6 text-[16px] md:text-[10px]  py-4 font-medium text-gray-900 whitespace-nowrap">
                                                 occ 90/10
                                             </th>
                                             <td class="px-6 py-4 flex items-center gap-2">
@@ -84,9 +84,9 @@ const page = () => {
                             </div> :
 
 
-                            <div class="relative overflow-x-auto mt-5">
+                            <div class="relative  mt-5">
                                 <table class="w-full text-sm text-left rtl:text-right text-black border border-[#D6D7DC] rounded-md">
-                                    <thead class="text-black font-bold text-[16px] uppercase">
+                                    <thead class="text-black font-bold text-[16px] md:text-[10px] uppercase">
                                         <tr className='bg-white border-b border-[#D6D7DC]'>
                                             <th scope="col" class="px-6 py-4 uppercase">
                                                 Country
