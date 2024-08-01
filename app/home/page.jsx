@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-
 import FirstCard from './components/FirstCard';
 import "../home/home.css"
 import SupplyOverViewCard from './components/SupplyOverViewCard';
@@ -12,8 +11,8 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <h1 className="text-2xl font-bold mb-4">Home</h1>
-      <div className="flex gap-4">
-        <div class="gap-4 w-2/5">
+      <div className="flex gap-4 lg:flex-col">
+        <div class="gap-4 w-2/5 lg:w-full">
           <FirstCard />
           <div className='mt-3'>
             <RationChartCard />
@@ -25,7 +24,7 @@ const Home = () => {
             <DemandCard />
           </div>
         </div>
-        <div class="gap-4 w-3/5">
+        <div class="gap-4 w-3/5 lg:w-full">
           <SupplyOverViewCard />
           <OfferTable />
         </div>

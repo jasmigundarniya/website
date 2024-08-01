@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from './Card'
-import FilterIcon from '@/public/assets/svgs/filterIcon'
+import DateModal from './DateModal';
+import Filter from '@/public/assets/svgs/Filter';
 
 const NewAdditionCard = () => {
+
+    const [filterModalOpen, setfilterModalOpen] = useState(false);
+
     return (
         <Card>
             <div className='flex justify-between items-center'>
                 <h2 className="text-[16px] font-bold uppercase">New Addition</h2>
-               <FilterIcon />
+                <div className='relative'>
+                    <button onClick={() => setfilterModalOpen(true)}>
+                        <Filter />
+                    </button>
+                    <DateModal isOpen={filterModalOpen} onClose={() => setfilterModalOpen(false)} />
+                </div>
+
             </div>
             <hr className={`border-t border-gray-300 my-4`} />
             <div className='flex gap-3 pt-4'>
@@ -22,7 +32,7 @@ const NewAdditionCard = () => {
                 </button>
             </div>
 
-            <div className={`flex justify-between mx-3`}>
+            <div className={`flex justify-between mx-3 mt-1`}>
                 <div className="flex flex-col items-center justify-center">
                     <p className='px-2 py-2 font-bold text-[#0B79DA]'>47</p>
                     <p className="mt-1 text-black font-bold">Total Offer</p>

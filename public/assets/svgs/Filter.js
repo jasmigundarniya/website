@@ -1,8 +1,8 @@
 import React from 'react'
 
-const FilterIcon = () => {
+const Filter = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 30 30" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
             <g clip-path="url(#clip0_34_6000)">
                 <rect width="30" height="30" rx="4" fill="#F3F6FE" />
                 <rect x="0.5" y="0.5" width="29" height="29" rx="3.5" stroke="#303750" stroke-opacity="0.2" />
@@ -17,4 +17,4 @@ const FilterIcon = () => {
     )
 }
 
-export default FilterIcon
+export default Filter

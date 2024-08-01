@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Card from './Card'
-import DrafIcon from '@/public/assets/svgs/DrafIcon';
-import BackArrow from '@/public/assets/svgs/BackArrow';
-import FilterIcon from '@/public/assets/svgs/filterIcon';
+import Draf from '@/public/assets/svgs/Draf';
+import Filter from '@/public/assets/svgs/Filter';
+import BackIcon from '@/public/assets/svgs/BackIcon';
 
 const SupplyOverViewCard = () => {
 
@@ -54,7 +54,7 @@ const SupplyOverViewCard = () => {
                     <Card>
                         <div className='flex justify-between items-center'>
                             <h2 className="text-[16px] font-bold uppercase">{cardTitleName}</h2>
-                            <FilterIcon />
+                            <Filter />
                         </div>
                         <hr className="border-t border-gray-300 my-4" />
                         {isSupplyBtnSelelct && <div className={`flex mx-3 py-3`}>
@@ -83,10 +83,10 @@ const SupplyOverViewCard = () => {
                         <Card>
                             <div className='flex justify-between items-center py-3'>
                                 <div className='flex items-center'>
-                                    <DrafIcon />
+                                    <Draf />
                                     <h2 className="text-[16px] font-bold ms-2">Draft(05)</h2>
                                 </div>
-                                <BackArrow />
+                                <BackIcon />
                             </div>
                         </Card>
                     </div>
@@ -94,7 +94,7 @@ const SupplyOverViewCard = () => {
                 <Card>
                     <div className='flex justify-between items-center'>
                         <h2 className="text-[16px] font-bold uppercase">Demand In Hand</h2>
-                        <FilterIcon />
+                        <Filter />
                     </div>
                     <hr className={`border-t border-gray-300 my-4 ${!isSupplyBtnSelelct && "mt-5 mb-5"}`} />
                     <div className='flex gap-3 pt-4'>

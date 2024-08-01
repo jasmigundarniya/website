@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Card from './Card';
 import { BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, CartesianGrid } from 'recharts';
 
-// Custom tick component for X-axis
 const CustomXAxisTick = ({ x, y, payload }) => (
     <text
         x={x}
@@ -25,7 +24,7 @@ export const RationChartCard = () => {
         { name: 'Demand 6SIC', value: 134 },
     ];
 
-    const customTicks = [5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 120, 135];
+    const customTicks = [5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 115, 125, 135];
 
     const dropdownOption = ["all", "manish", "yogesh", "govind", "pallav", "VIVIIVPASATH"]
 
@@ -75,22 +74,21 @@ export const RationChartCard = () => {
             </div>
             <div className='ps-2'>
                 <BarChart width={450} height={150} data={data} layout="vertical">
-                    {/* <CartesianGrid strokeDasharray="3 3" /> */}
                     <XAxis
                         type="number"
                         tick={<CustomXAxisTick />} // Apply custom tick component
                         tickLine={false} // Remove default tick lines if needed
                         axisLine={{ stroke: '#D1D5DB', strokeWidth: 2, strokeDasharray: '5 6' }}
                         ticks={customTicks} // Set custom tick values
-                        label={{
-                            value: 'Number of Offers',
-                            position: 'insideBottomCenter', // Position label in the center
-                            offset: 0, // Adjust offset to position label
-                            fill: '#000',
-                            fontSize: 14,
-                            fontWeight: 'bold',
-                            textAnchor: 'middle' // Center the text horizontally
-                        }}
+                        // label={{
+                        //     value: 'Number of Offers',
+                        //     position: 'insideBottomCenter', // Position label in the center
+                        //     offset: 0, // Adjust offset to position label
+                        //     fill: '#000',
+                        //     fontSize: 14,
+                        //     fontWeight: 'bold',
+                        //     textAnchor: 'middle' // Center the text horizontally
+                        // }}
                     />
                     <YAxis dataKey="name" type="category" axisLine={false} tickLine={false} />
                     <Bar dataKey="value" fill="#0B79DA" radius={[5, 5, 5, 5]} />

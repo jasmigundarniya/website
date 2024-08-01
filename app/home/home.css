@@ -1,6 +1,10 @@
 .table-col {
     font-size: 16px;
     font-weight: 700;
-    line-height: 20.11px;
+    line-height: 20px;
     text-align: center;
+}
+
+.react-datepicker-wrapper{
+    width : 100% !important;
 }
