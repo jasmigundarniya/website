@@ -19,6 +19,7 @@ import ViewTrader from "@/public/assets/svgs/ViewTrader";
 import PowerBi from "@/public/assets/svgs/PowerBi";
 import Deal from "@/public/assets/svgs/Deal";
 import Rate from "@/public/assets/svgs/Rate";
+import LogOut from "@/public/assets/svgs/LogOut";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -40,11 +41,11 @@ const Header = () => {
           <h2 className="text-black font-semibold sm:hidden">Dashboard</h2>
         </div>
         <div className="flex items-center gap-3 sm:hidden">
-          <button className="text-[#838796] flex items-center gap-2 border rounded-md px-3 py-2">
+          <button className="bg-[#0B79DA] text-white flex items-center gap-2 border rounded-md px-3 py-2">
             <FiPlus />
             Demand
           </button>
-          <button className="text-[#838796] flex items-center gap-2 border rounded-md px-3 py-2">
+          <button className="bg-[#0B79DA] text-white flex items-center gap-2 border rounded-md px-3 py-2">
             <FiPlus />
             Supply
           </button>
@@ -73,7 +74,7 @@ const Header = () => {
               />
             </div>
           </div>
-          <div className="pt-4">
+          <div className="pt-4 h-[calc(100vh-82.4px)] overflow-auto sidescroll">
             <Image
               src={profile}
               width={40}
@@ -130,6 +131,10 @@ const Header = () => {
               <div className="flex items-center gap-2 font-normal text-[13px]">
                 <Rate />
                 <h3>Freight Rates</h3>
+              </div>
+              <div className="flex items-center gap-2 font-normal text-[13px] border-t border-[#30375033] pt-4 mt-14">
+                <LogOut />
+                <h3>Log out</h3>
               </div>
             </div>
           </div>

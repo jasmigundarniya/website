@@ -11,3 +11,8 @@
 /* * {
   font-family: "Source Code Pro", monospace;
 } */
+
+
+.sidescroll::-webkit-scrollbar {
+  width: 0 !important;
+}
