@@ -25,12 +25,12 @@ const page = () => {
       <div>
         <div className="grid grid-cols-3 h-screen px-5">
           <div className="flex justify-start gap-5">
-            <div className="flex flex-col justify-end gap-5">
+            <div className="flex flex-col justify-end gap-5 h-screen">
               <Image src={bg1} width={231} height={368} />
               <Image src={bg2} width={231} height={368} />
               <Image src={bg3} width={231} height={368} />
             </div>
-            <div className="flex flex-col justify-end gap-5">
+            <div className="flex flex-col justify-end gap-5 h-screen">
               <Image src={bg4} width={231} height={368} />
               <Image src={bg5} width={231} height={368} />
               <Image src={bg6} width={231} height={368} />
@@ -68,7 +68,7 @@ const page = () => {
               <div>
                 <p className="text-[16px] text-gray-400 text-center">
                   Did you don’t get code?{" "}
-                  <span className="text-black"> Request new <br/> code in 00:05</span>
+                  <span className="text-black"> Request new <br /> code in 00:05</span>
                 </p>
                 <div className="text-[16px] text-[#0B79DA] font-normal flex gap-2 justify-center items-center mt-5">
                   <Image src={left} width={20} height={20} />
@@ -78,12 +78,12 @@ const page = () => {
             </div>
           </div>
           <div className="flex justify-end gap-5">
-            <div className="flex flex-col justify-end gap-5">
+            <div className="flex flex-col justify-end gap-5 h-screen">
               <Image src={bg7} width={231} height={368} />
               <Image src={bg8} width={231} height={368} />
               <Image src={bg9} width={231} height={368} />
             </div>
-            <div className="flex flex-col justify-end gap-5">
+            <div className="flex flex-col justify-end gap-5 h-screen">
               <Image src={bg10} width={231} height={368} />
               <Image src={bg11} width={231} height={368} />
               <Image src={bg12} width={231} height={368} />
